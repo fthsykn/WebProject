@@ -1,0 +1,391 @@
+/* Common styles for all pages */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay */
+  z-index: -1;
+}
+
+
+.container{
+  width: 100%;
+  max-width: 1000px; /* good width for laptop display */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Header styles */
+header {
+  background-color: #6a0dad; /* purple */
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+header h1, header h2 {
+  margin: 0;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+}
+
+/* Fieldset styling */
+fieldset {
+  border: 1px solid #120101;
+  border-radius: 6px;
+  padding: 1rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #2f227c;
+}
+
+/* Label and input horizontal alignment */
+.form-row {
+  display: flex;
+  align-items: left;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  flex: 1 0 180px;
+  font-weight: bold;
+  color: #ecf0f3;
+  padding-right: 10px;
+  min-width: 160px;
+  white-space: nowrap;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row input[type="time"],
+.form-row input[type="number"],
+.form-row select {
+  flex: 2 0 300px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="email"]:focus,
+.form-row input[type="date"]:focus,
+.form-row input[type="time"]:focus,
+.form-row input[type="number"]:focus,
+.form-row select:focus {
+  border-color: #2f227c;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 105, 85, 0.3);
+}
+
+/* Checkbox and radio group styling */
+.checkbox-group, .radio-group {
+  flex: 2 0 300px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start; /* align items to top */
+  justify-content: flex-start; /* align items starting from left */
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  line-height: 1.0;
+}
+
+
+.checkbox-group label,
+.radio-group label {
+  font-weight: normal;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+fieldset {
+  line-height: 0.4;
+  text-align: left;   /* align all text to the left */
+  margin-bottom: 1.5rem;  /* space between fieldsets */
+}
+
+fieldset label,
+fieldset p,
+fieldset legend {
+  line-height: 0.8;
+  text-align: left;
+  display: block;        /* make label take full width */
+  margin-bottom: 0.8rem; /* space below the label text */
+}
+
+fieldset input[type="text"],
+fieldset input[type="date"],
+fieldset select {
+  display: block;        /* force input to new line */
+  width: 100%;
+  margin-top: 0.8rem;    /* small space above input */
+  margin-bottom: 1rem;   /* space below input */
+  box-sizing: border-box;
+  text-align: left; /* keep input text aligned left */
+}
+
+
+/* Special handling for Lokasi "lain-lain" text input */
+#lokasiLainWrapper {
+  margin-top: 0.5rem;
+  max-width: 300px;
+}
+
+#lokasiLain {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#lokasiLain:focus {
+  border-color: #2f227c;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 105, 85, 0.3);
+}
+
+/* Dropdown with conditional text field for Nama Tetamu Kehormat */
+#namaTetamuInput {
+  margin-top: 0.5rem;
+  max-width: 400px;
+}
+
+#namaTetamuInput input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#namaTetamuInput input[type="text"]:focus {
+  border-color: #2f227c;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 105, 85, 0.3);
+}
+
+
+/* Button container */
+.center {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+button[type="submit"] {
+  background-color: #2f227c;
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2f227c;
+}
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submit-container button {
+  width: auto; /* Prevent it from stretching full width */
+}
+
+
+
+/* Profile Card Styling */
+.profile-card {
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: #f5f4fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-card img {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.profile-info {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.info-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.info-row strong {
+  width: 150px;
+  display: inline-block;
+  color: #333;
+}
+
+
+
+/* Result output styling */
+#result {
+  background-color: #f0f8f0;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  color: #0c0c0c;
+}
+
+/* Footer styles */
+footer {
+  background-color: #6a0dad; /* purple */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-row label {
+    margin-bottom: 0.3rem;
+  }
+
+  .checkbox-group, .radio-group {
+    flex: 1 0 100%;
+  }
+}
+/* Page Centering for All Pages */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  min-height: 100vh;
+  background-color:transparent;
+}
+.nav-buttons {
+  text-align: center;  /* center buttons horizontally */
+  margin: 1rem 0;
+  gap: 15px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.nav-buttons button {
+  background-color: #847bb8;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #2f227c;
+}
+
+
+
+/* Center content inside profile or form container */
+.container, .profile {
+  text-align: initial;
+}
+
+.home-container {
+  width: 100vw;                /* Full viewport width */
+  height: 60vh;               /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay */
+  color: white;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Borang Permohonan Pindaan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valid.js" defer></script>
+</head>
+<body>
+  <header>
+  <h1>Borang Permohonan Pindaan / Penangguhan Aktiviti Pelajar</h1>
+  <br>
+   <nav class="nav-buttons">
+    <button onclick="location.href='home.html'">Laman Utama</button>
+  <button onclick="location.href='profile.html'">Maklumat Diri</button>
+  <button onclick="location.href='index.html'">Borang Permohonan</button>
+</nav>
+
+</header>
+<main>
+  <div class="container">
+    <form id="borangForm">
+    <fieldset>
+      <legend>Bahagian A: Maklumat Program & Pindaan</legend>
+      <p><strong>A. Kategori aktiviti:</strong></p>
+<select name="kategori" required>
+  <option value="" disabled selected>Pilih kategori</option>
+  <option value="Dalam Kampus">Dalam Kampus</option>
+  <option value="Luar Kampus">Luar Kampus</option>
+  <option value="Rekreasi Di Luar Kampus">Rekreasi Di Luar Kampus</option>
+</select>
+
+      <p><strong>B. Jenis Pindaan/Perubahan:</strong></p>
+      <label><input type="checkbox" name="jenis" value="Pembatalan Program"> Pembatalan Program</label>
+      <label><input type="checkbox" name="jenis" value="Pindaan Tarikh"> Pindaan Tarikh</label>
+      <label><input type="checkbox" name="jenis" value="Perubahan Tempat"> Perubahan Tempat  </label>
+      <label><input type="checkbox" name="jenis" value="Tukar Penceramah"> Tukar Penceramah/ Panel/Pembentang Kertas Kerja/ Permbimbing/ Fasilitator/ Jurulatih/ dll.</label> <br>
+      <label><input type="checkbox" name="jenis" value="Lain-lain"> Lain-lain: <input type="text" name="lain" placeholder="Nyatakan"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bahagian B: Maklumat Pemohon</legend>
+      <label>Nama Pemohon: <input type="text" id="nama" required></label><br>
+      <label>Jawatan Dalam Persatuan/Program: <input type="text" required></label><br>
+      <label>No. Staf/Pelajar: <input type="text" required></label><br>
+      <label>No. Telefon: <input type="text" required></label><br>
+      <label>Tarikh Serah Borang: <input type="date" required></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bahagian C: Maklumat Program/Aktiviti</legend>
+      <label>Nama Aktiviti: <input type="text" required></label><br>
+      <label>Anjuran: <input type="text" required></label><br>
+      <label>Tarikh: <input type="date" required></label><br>
+      <label>Tempat:      <input type="text" required></label><br>
+    </fieldset>
+
+    <div class="submit-container">
+    <button type="submit">Hantar Borang</button>
+</div>
+
+  </form>
+    <div id="result" style="margin-top: 20px;"></div>
+  </div>
+</main>
+<footer>
+<p>&copy; 2025 Fatihah Asyikin. Universiti Teknologi MARA</p>
+  </footer>
+</body>
+</html>
